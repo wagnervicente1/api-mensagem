@@ -9,7 +9,7 @@ module.exports = {
         sgMail.setApiKey(API_KEY)
 
         const message = {
-            from: 'daniellost02@gmail.com',
+            from: 'wagner.vicentebr@gmail.com',
             to,
             subject,
             text,
