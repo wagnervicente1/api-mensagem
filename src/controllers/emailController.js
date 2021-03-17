@@ -17,7 +17,7 @@ module.exports = {
         }
         
         sgMail.send(message)
-            .then(response => console.log('email sent ....'))
+            .then(response => console.log('email sents ....'))
             .catch(error => console.log(error.message))
 
         return res.json({ id: "funcionou" });
