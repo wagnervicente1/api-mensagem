@@ -21,7 +21,7 @@ module.exports = {
                 return res.json({ data: response });
             })
             .catch(error => {
-                return res.status(400).json({ data: response });
+                return res.status(400).json({ data: error });
             })
     },
     
