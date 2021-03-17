@@ -17,10 +17,12 @@ module.exports = {
         }
         
         sgMail.send(message)
-            .then(response => console.log('email sents ....'))
-            .catch(error => console.log(error.message))
-
-        return res.json({ id: "funcionou" });
+            .then(response => {
+                return res.json({ data: response });
+            })
+            .catch(error => {
+                return res.status(400).json({ data: response });
+            })
     },
     
     hello(req, res) {
