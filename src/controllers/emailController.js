@@ -3,13 +3,13 @@ const sgMail= require('@sendgrid/mail')
 module.exports = {
     async sendEmail(req, res) {
     
-        const {to, subject, text, html} = req.body;
+        const {from, to, subject, text, html} = req.body;
         const API_KEY = req.headers.authorization;
 
         sgMail.setApiKey(API_KEY)
 
         const message = {
-            from: 'wagner.vicentebr@gmail.com',
+            from,
             to,
             subject,
             text,
